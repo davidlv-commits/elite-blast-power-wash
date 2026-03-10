@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <defs>
+    <linearGradient id="dirtyGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b8cbd7"/>
+      <stop offset="100%" stop-color="#6f8999"/>
+    </linearGradient>
+    <linearGradient id="cleanGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dff6ff"/>
+      <stop offset="100%" stop-color="#7fc7e6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="#dce9ef"/>
+  <rect x="0" y="0" width="400" height="480" fill="#d0d7db"/>
+  <rect x="400" y="0" width="400" height="480" fill="#eef7fc"/>
+  <rect x="80" y="36" width="240" height="408" fill="url(#dirtyGlass)" stroke="#dad3c7" stroke-width="18"/>
+  <rect x="480" y="36" width="240" height="408" fill="url(#cleanGlass)" stroke="#f7f3ed" stroke-width="18"/>
+  <path d="M198 36v408M80 242h240" stroke="#d5d7d8" stroke-width="14" opacity="0.7"/>
+  <path d="M598 36v408M480 242h240" stroke="#f7feff" stroke-width="14" opacity="0.85"/>
+  <path d="M108 66c30 16 44 72 28 132M142 82c12 20 18 56 10 94" stroke="#ffffff" stroke-width="18" opacity="0.22" stroke-linecap="round"/>
+  <path d="M530 66c44 28 56 94 26 156" stroke="#ffffff" stroke-width="18" opacity="0.36" stroke-linecap="round"/>
+  <path d="M390 0h20v480h-20z" fill="#f7fdff"/>
+</svg>

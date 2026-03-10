@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Blast Power Wash</title>
+    <meta
+      name="description"
+      content="Professional exterior cleaning for homes, driveways, gutters, roofs, windows, and more."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;800&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-top-strip" aria-hidden="true"></div>
+        <div class="container nav-wrap">
+          <a class="brand" href="#inicio" aria-label="Elite Blast Power Wash">
+            <img class="brand-logo" src="assets/logo-elite-blast.png" alt="Elite Blast Power Wash" />
+            <span class="brand-phone">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="brand-phone-icon">
+                <path
+                  d="M7.2 2.6h3.1c.5 0 .9.3 1 .8l.7 3.2c.1.4 0 .9-.4 1.1L9.8 9.1a14.3 14.3 0 0 0 5.1 5.1l1.4-1.8c.3-.4.7-.5 1.1-.4l3.2.7c.5.1.8.5.8 1v3.1c0 .6-.5 1.1-1.1 1.1C10.5 21 3 13.5 3 3.7c0-.6.5-1.1 1.1-1.1h3.1Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span>(201) 589-7668</span>
+            </span>
+          </a>
+
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="site-nav">
+            <a href="#inicio" data-i18n="nav.home">Home</a>
+            <a href="#servicios" data-i18n="nav.services">Services</a>
+            <a href="#resultados" data-i18n="nav.results">Results</a>
+            <a href="#nosotros" data-i18n="nav.about">About Us</a>
+            <a href="#contacto" class="nav-cta" data-i18n="nav.cta">Free Estimate</a>
+          </nav>
+          <div class="language-switcher" aria-label="Language switcher">
+            <button type="button" class="lang-button is-active" data-lang="en">EN</button>
+            <button type="button" class="lang-button" data-lang="es">ES</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="inicio">
+          <div class="container hero-stage" data-reveal>
+            <img src="assets/hero-house.jpeg" alt="Clean suburban house exterior" class="hero-photo" />
+            <div class="hero-copy">
+              <h1 data-i18n-html="hero.title">Start your spring<br />with lots of cleaning</h1>
+              <p class="hero-subtitle" data-i18n="hero.subtitle">Request your free estimate today</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="services" id="servicios">
+          <div class="container">
+            <div class="section-heading" data-reveal>
+              <h2 data-i18n="services.title">Our services and results</h2>
+            </div>
+
+            <div class="service-grid" id="resultados">
+              <article class="service-card" data-reveal>
+                <div class="comparison comparison-real" data-before-after style="--split: 50%;">
+                  <img
+                    src="assets/house-before.jpeg"
+                    alt="Antes del lavado exterior de la casa"
+                    class="comparison-image comparison-image-base"
+                  />
+                  <div class="comparison-overlay">
+                    <img
+                      src="assets/house-after.jpeg"
+                      alt="Después del lavado exterior de la casa"
+                      class="comparison-image"
+                    />
+                  </div>
+                  <span class="tag tag-left" data-i18n="compare.before">Before</span>
+                  <span class="tag tag-right" data-i18n="compare.after">After</span>
+                  <div class="split-handle"></div>
+                  <input
+                    class="comparison-range"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    aria-label="Compare before and after"
+                  />
+                </div>
+                <h3 data-i18n="cards.house.title">House Exterior Wash</h3>
+                <p data-i18n="cards.house.copy">Remove mildew, dirt, and stains without damaging siding, paint, or delicate finishes.</p>
+              </article>
+
+              <article class="service-card" data-reveal>
+                <div class="comparison comparison-real" data-before-after style="--split: 50%;">
+                  <img
+                    src="assets/entrada-after.jpeg"
+                    alt="Comparativa antes y después de limpieza de driveway"
+                    class="comparison-image comparison-image-base"
+                  />
+                  <div class="comparison-overlay">
+                    <img
+                      src="assets/entrada-before.jpeg"
+                      alt="Comparativa antes y después de limpieza de driveway"
+                      class="comparison-image"
+                    />
+                  </div>
+                  <span class="tag tag-left" data-i18n="compare.before">Before</span>
+                  <span class="tag tag-right" data-i18n="compare.after">After</span>
+                  <div class="split-handle"></div>
+                  <input
+                    class="comparison-range"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    aria-label="Compare before and after"
+                  />
+                </div>
+                <h3 data-i18n="cards.driveway.title">Driveways and Walkways</h3>
+                <p data-i18n="cards.driveway.copy">Concrete, slab, and pavement deep-cleaned to recover color and texture.</p>
+              </article>
+
+              <article class="service-card" data-reveal>
+                <div class="comparison comparison-real" data-before-after style="--split: 50%;">
+                  <img
+                    src="assets/canalon-after.jpeg"
+                    alt="Comparativa antes y después de limpieza de canalones"
+                    class="comparison-image comparison-image-base"
+                  />
+                  <div class="comparison-overlay">
+                    <img
+                      src="assets/canalon-before.jpeg"
+                      alt="Comparativa antes y después de limpieza de canalones"
+                      class="comparison-image"
+                    />
+                  </div>
+                  <span class="tag tag-left" data-i18n="compare.before">Before</span>
+                  <span class="tag tag-right" data-i18n="compare.after">After</span>
+                  <div class="split-handle"></div>
+                  <input
+                    class="comparison-range"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    aria-label="Compare before and after"
+                  />
+                </div>
+                <h3 data-i18n="cards.gutter.title">Gutter Cleaning</h3>
+                <p data-i18n="cards.gutter.copy">Debris removal and exterior cleaning to prevent clogs and improve drainage.</p>
+              </article>
+
+              <article class="service-card" data-reveal>
+                <div class="comparison comparison-real" data-before-after style="--split: 50%;">
+                  <img
+                    src="assets/escaleras-after.jpeg"
+                    alt="Comparativa antes y después en escaleras y railings"
+                    class="comparison-image comparison-image-base"
+                  />
+                  <div class="comparison-overlay">
+                    <img
+                      src="assets/escaleras-before.jpeg"
+                      alt="Comparativa antes y después en escaleras y railings"
+                      class="comparison-image"
+                    />
+                  </div>
+                  <span class="tag tag-left" data-i18n="compare.before">Before</span>
+                  <span class="tag tag-right" data-i18n="compare.after">After</span>
+                  <div class="split-handle"></div>
+                  <input
+                    class="comparison-range"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    aria-label="Compare before and after"
+                  />
+                </div>
+                <h3 data-i18n="cards.stairs.title">Stairs and Railings</h3>
+                <p data-i18n="cards.stairs.copy">Targeted exterior cleaning for railings, steps, and access areas.</p>
+              </article>
+
+              <article class="service-card" data-reveal>
+                <div class="comparison comparison-real" data-before-after style="--split: 50%;">
+                  <img
+                    src="assets/tejado-after.jpeg"
+                    alt="Comparativa antes y después de limpieza de techo"
+                    class="comparison-image comparison-image-base"
+                  />
+                  <div class="comparison-overlay">
+                    <img
+                      src="assets/tejado-before.jpeg"
+                      alt="Comparativa antes y después de limpieza de techo"
+                      class="comparison-image"
+                    />
+                  </div>
+                  <span class="tag tag-left" data-i18n="compare.before">Before</span>
+                  <span class="tag tag-right" data-i18n="compare.after">After</span>
+                  <div class="split-handle"></div>
+                  <input
+                    class="comparison-range"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    aria-label="Compare before and after"
+                  />
+                </div>
+                <h3 data-i18n="cards.roof.title">Roof Cleaning</h3>
+                <p data-i18n="cards.roof.copy">Treat organic buildup and restore curb appeal without damaging the surface.</p>
+              </article>
+
+              <article class="service-card" data-reveal>
+                <div class="comparison comparison-real" data-before-after style="--split: 50%;">
+                  <img
+                    src="assets/ventana-after.jpeg"
+                    alt="Comparativa antes y después de limpieza de ventanas"
+                    class="comparison-image comparison-image-base"
+                  />
+                  <div class="comparison-overlay">
+                    <img
+                      src="assets/ventana-before.jpeg"
+                      alt="Comparativa antes y después de limpieza de ventanas"
+                      class="comparison-image"
+                    />
+                  </div>
+                  <span class="tag tag-left" data-i18n="compare.before">Before</span>
+                  <span class="tag tag-right" data-i18n="compare.after">After</span>
+                  <div class="split-handle"></div>
+                  <input
+                    class="comparison-range"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    aria-label="Compare before and after"
+                  />
+                </div>
+                <h3 data-i18n="cards.window.title">Window Cleaning</h3>
+                <p data-i18n="cards.window.copy">Clearer glass, fewer water marks, and a cleaner, brighter facade.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="trust-band">
+          <div class="container trust-grid" data-reveal>
+            <div>
+              <p class="eyebrow" data-i18n="trust.eyebrow">Why choose Elite Blast Power Wash</p>
+              <h2 data-i18n="trust.title">Professional exterior cleaning with visible results and a service you can count on.</h2>
+            </div>
+            <div class="trust-metrics">
+              <div>
+                <strong>6</strong>
+                <span data-i18n="trust.metric1">main services</span>
+              </div>
+              <div>
+                <strong data-i18n="trust.metric2Value">Fast</strong>
+                <span data-i18n="trust.metric2">response and scheduling</span>
+              </div>
+              <div>
+                <strong>100%</strong>
+                <span data-i18n="trust.metric3">focused on curb appeal</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-contact" id="nosotros">
+          <div class="container about-contact-grid">
+            <div class="about-panel" data-reveal>
+              <p class="eyebrow" data-i18n="about.eyebrow">About us</p>
+              <h2 data-i18n="about.title">Elite Blast Power Wash presents itself as a clean, technical, and reliable brand.</h2>
+              <p>
+                <span data-i18n="about.copy">This direction takes the strongest elements from your references: deep blue, aqua accents, before-and-after focus, direct messaging, and a premium-clean feel.</span>
+              </p>
+              <div class="feature-list">
+                <div>
+                  <strong data-i18n="about.feature1.title">Recognizable branding</strong>
+                  <span data-i18n="about.feature1.copy">The real logo is now integrated into the main conversion points.</span>
+                </div>
+                <div>
+                  <strong data-i18n="about.feature2.title">Clear services</strong>
+                  <span data-i18n="about.feature2.copy">The six main service categories stay visible without overloading the home page.</span>
+                </div>
+                <div>
+                  <strong data-i18n="about.feature3.title">Direct conversion</strong>
+                  <span data-i18n="about.feature3.copy">Buttons, phone, and form are aligned with the commercial goal.</span>
+                </div>
+              </div>
+            </div>
+
+            <section class="contact-panel" id="contacto" data-reveal>
+              <p class="eyebrow" data-i18n="contact.eyebrow">Free estimate</p>
+              <h2 data-i18n="contact.title">Ready for a production-ready version?</h2>
+              <p><span data-i18n="contact.copy">Call us at</span> <a href="tel:+12015897668">(201) 589-7668</a> <span data-i18n="contact.copy2">or send a request.</span></p>
+
+              <form class="contact-form">
+                <label>
+                  <span data-i18n="form.name">Name</span>
+                  <input type="text" name="name" placeholder="Your name" data-i18n-placeholder="form.namePlaceholder" />
+                </label>
+                <label>
+                  Email
+                  <input type="email" name="email" placeholder="your@email.com" data-i18n-placeholder="form.emailPlaceholder" />
+                </label>
+                <label>
+                  <span data-i18n="form.service">Service</span>
+                  <select name="service">
+                    <option data-i18n="cards.house.title">House Exterior Wash</option>
+                    <option data-i18n="cards.driveway.title">Driveways and Walkways</option>
+                    <option data-i18n="cards.gutter.title">Gutter Cleaning</option>
+                    <option data-i18n="cards.stairs.title">Stairs and Railings</option>
+                    <option data-i18n="cards.roof.title">Roof Cleaning</option>
+                    <option data-i18n="cards.window.title">Window Cleaning</option>
+                  </select>
+                </label>
+                <label>
+                  <span data-i18n="form.message">Message</span>
+                  <textarea name="message" rows="4" placeholder="Tell us what you need cleaned" data-i18n-placeholder="form.messagePlaceholder"></textarea>
+                </label>
+                <button type="submit" class="button button-primary" data-i18n="form.submit">Request Estimate</button>
+              </form>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-wrap">
+          <div>
+            <img src="assets/logo-elite-blast.png" alt="Elite Blast Power Wash" class="footer-logo" />
+            <p class="footer-cta" data-i18n="footer.cta">Call us to start your next exterior cleaning project.</p>
+            <a class="footer-phone" href="tel:+12015897668">(201) 589-7668</a>
+          </div>
+          <div class="footer-links">
+            <a href="#inicio" data-i18n="nav.home">Home</a>
+            <a href="#servicios" data-i18n="nav.services">Services</a>
+            <a href="#nosotros" data-i18n="nav.about">About Us</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

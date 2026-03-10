@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Casa suburbana limpia con driveway</title>
+  <desc id="desc">Ilustracion de estilo comercial para hero de empresa de lavado exterior.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d7f3ff"/>
+      <stop offset="100%" stop-color="#8bc7ef"/>
+    </linearGradient>
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6ccb5a"/>
+      <stop offset="100%" stop-color="#3f8c34"/>
+    </linearGradient>
+    <linearGradient id="driveway" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0%" stop-color="#e3dfd8"/>
+      <stop offset="100%" stop-color="#b8b0a5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#173250" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="820" fill="url(#sky)"/>
+  <circle cx="172" cy="110" r="68" fill="#f7feff" opacity="0.8"/>
+  <path d="M0 458h1200v362H0z" fill="url(#grass)"/>
+  <path d="M462 462 1210 450v370H238V667z" fill="url(#driveway)"/>
+  <path d="M128 522c80-90 136-126 200-132s97 42 126 96-10 88-61 97-187 8-265-14Z" fill="#4b983e"/>
+  <path d="M918 522c56-58 96-88 136-86 32 2 60 20 68 48 13 42-16 69-58 77s-121 0-172-12Z" fill="#4f9d43"/>
+  <g filter="url(#shadow)">
+    <path d="M368 170h416l182 118v290H248V304z" fill="#e8dfd2"/>
+    <path d="M320 298 436 168h374l210 132v32H320z" fill="#746d68"/>
+    <path d="M560 248h186l188 112H560z" fill="#88817b"/>
+    <path d="M376 250h72v304h-72z" fill="#9d8367"/>
+    <path d="M470 250h78v304h-78z" fill="#efe7dc"/>
+    <path d="M560 250h86v304h-86z" fill="#efe7dc"/>
+    <path d="M658 250h88v304h-88z" fill="#efe7dc"/>
+    <path d="M758 250h156v304H758z" fill="#ded4c8"/>
+    <path d="M774 338h122v182H774z" fill="#e9e3da"/>
+    <path d="M784 348h102v162" fill="none" stroke="#c6beb3" stroke-width="8"/>
+    <path d="M784 400h102M784 452h102" stroke="#c6beb3" stroke-width="6"/>
+    <rect x="496" y="300" width="64" height="64" fill="#86b6d7" stroke="#f7f3ed" stroke-width="8"/>
+    <rect x="584" y="300" width="64" height="64" fill="#86b6d7" stroke="#f7f3ed" stroke-width="8"/>
+    <rect x="496" y="392" width="64" height="64" fill="#86b6d7" stroke="#f7f3ed" stroke-width="8"/>
+    <rect x="584" y="392" width="64" height="64" fill="#86b6d7" stroke="#f7f3ed" stroke-width="8"/>
+    <rect x="686" y="304" width="56" height="76" fill="#84b0cf" stroke="#f7f3ed" stroke-width="8"/>
+    <rect x="404" y="408" width="54" height="146" fill="#624437"/>
+    <path d="M248 568h718v34H248z" fill="#d4cabd"/>
+    <path d="M286 226h40v348h-40zM946 316h28v262h-28z" fill="#b29a82"/>
+  </g>
+  <path d="M0 0h1200v820H0z" fill="none" stroke="#ffffff" stroke-opacity="0.24" stroke-width="8"/>
+</svg>

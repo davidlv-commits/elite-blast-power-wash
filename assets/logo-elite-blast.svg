@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 760" role="img" aria-labelledby="title desc">
+  <title id="title">Elite Blast Power Wash</title>
+  <desc id="desc">Logotipo con escudo, agua y texto Elite Blast Power Wash.</desc>
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4fe4ff"/>
+      <stop offset="55%" stop-color="#1f9fe1"/>
+      <stop offset="100%" stop-color="#0a396f"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#1f8bd1"/>
+      <stop offset="100%" stop-color="#06254c"/>
+    </linearGradient>
+    <linearGradient id="spray" x1="0" y1="0" x2="1" y2="0.2">
+      <stop offset="0%" stop-color="#72f1ff"/>
+      <stop offset="65%" stop-color="#4ed8f4"/>
+      <stop offset="100%" stop-color="#b7fbff"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e70c1"/>
+      <stop offset="100%" stop-color="#04234a"/>
+    </linearGradient>
+    <linearGradient id="textFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b5fa7"/>
+      <stop offset="100%" stop-color="#03162d"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#03162d" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <ellipse cx="430" cy="315" rx="260" ry="280" fill="none" stroke="#041b38" stroke-width="20"/>
+    <ellipse cx="430" cy="315" rx="247" ry="267" fill="none" stroke="url(#ring)" stroke-width="11"/>
+    <path d="M173 200c-18 48-27 96-27 151 0 120 46 226 125 307" fill="none" stroke="#9befff" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+    <path d="M690 165c32 56 49 120 49 186 0 113-47 220-128 299" fill="none" stroke="#1f9fe1" stroke-width="14" stroke-linecap="round" opacity="0.8"/>
+    <path d="M429 102 588 170v136c0 124-70 207-159 286-89-79-159-162-159-286V170z" fill="#dffaff" stroke="#082c57" stroke-width="18"/>
+    <path d="M429 132 556 187v119c0 97-49 169-127 240-78-71-127-143-127-240V187z" fill="url(#shield)"/>
+    <path d="M316 330c52-16 96-8 149 22" fill="none" stroke="#0d6ebb" stroke-width="22" stroke-linecap="round"/>
+    <path d="M461 336c51-64 98-131 149-196 28-35 55-26 44 7-8 25-6 42 9 51 34 19 20 48-17 42 10 32-16 46-39 30 0 28-23 34-38 18" fill="none" stroke="url(#spray)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M299 375c54-18 117-6 175 28" fill="none" stroke="#7bf2ff" stroke-width="10" stroke-linecap="round"/>
+    <path d="M344 338 473 253" fill="none" stroke="#06254c" stroke-width="30" stroke-linecap="round"/>
+    <path d="M344 338 473 253" fill="none" stroke="url(#metal)" stroke-width="18" stroke-linecap="round"/>
+    <path d="M308 361c20-27 43-22 57 2l15 26c10 17 9 38-4 53l-23 28c-8 9-22 3-21-9l2-27c1-12-5-24-15-31l-17-12c-11-8-13-23-4-30l10-8Z" fill="#05234a" stroke="#0d6ebb" stroke-width="9"/>
+    <path d="M431 404a44 44 0 0 0-44 44c0 41 44 70 44 70s44-29 44-70a44 44 0 0 0-44-44Zm0 22a22 22 0 1 1 0 44 22 22 0 0 1 0-44Z" fill="#dffaff"/>
+    <path d="M362 216l23 47 52 7-38 33 10 50-47-25-45 25 9-50-37-33 51-7z" fill="#ebfbff"/>
+    <path d="M495 194l16 32 34 5-25 22 6 33-31-17-30 17 6-33-24-22 33-5z" fill="#ebfbff"/>
+    <circle cx="350" cy="138" r="11" fill="#2ea8e7"/>
+    <circle cx="278" cy="202" r="12" fill="#1a8bd0"/>
+    <circle cx="614" cy="115" r="10" fill="#3fd8f7"/>
+    <circle cx="650" cy="322" r="10" fill="#1a8bd0"/>
+    <circle cx="228" cy="352" r="7" fill="#3fd8f7"/>
+    <path d="M248 606c50 30 111 48 181 48 69 0 133-18 184-50" fill="none" stroke="#6feeff" stroke-width="14" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <path d="M36 470h788l-24 87H62z" fill="#06254c"/>
+    <path d="M24 458h812v27H24z" fill="#03162d"/>
+    <path d="M108 568h640l-33 22H141z" fill="#06254c"/>
+    <g fill="url(#textFill)" stroke="#03162d" stroke-width="10" paint-order="stroke">
+      <text x="430" y="555" text-anchor="middle" font-family="Impact, Haettenschweiler, 'Arial Black', sans-serif" font-size="118" letter-spacing="4">ELITE BLAST</text>
+      <text x="430" y="637" text-anchor="middle" font-family="Impact, Haettenschweiler, 'Arial Black', sans-serif" font-size="84" letter-spacing="3">POWER WASH</text>
+    </g>
+  </g>
+</svg>
