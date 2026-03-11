@@ -368,6 +368,31 @@ svg {
   border-radius: 26px;
 }
 
+.service-card-featured {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(8, 47, 99, 0.96), rgba(9, 159, 203, 0.9));
+  color: #fff;
+}
+
+.service-card-featured h3,
+.service-card-featured p {
+  margin: 0;
+}
+
+.service-card-featured h3 {
+  font-size: 1.85rem;
+  color: #fff;
+}
+
+.service-card-featured p {
+  color: rgba(255, 255, 255, 0.9);
+  align-self: end;
+}
+
 .service-card h3 {
   margin: 18px 0 8px;
   font-family: "League Spartan", sans-serif;
@@ -584,6 +609,12 @@ svg {
   color: var(--muted);
 }
 
+.contact-email {
+  font-size: 0.9rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+
 .feature-list {
   display: grid;
   gap: 14px;
@@ -727,6 +758,10 @@ svg {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .service-card-featured {
+    grid-column: span 2;
+  }
+
   .trust-metrics {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -795,6 +830,11 @@ svg {
 
   .service-grid,
   .trust-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-featured {
+    grid-column: span 1;
     grid-template-columns: 1fr;
   }
 
