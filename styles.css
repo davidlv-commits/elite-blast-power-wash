@@ -355,6 +355,13 @@ svg {
   gap: 22px;
 }
 
+.service-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
 .service-card,
 .about-panel,
 .contact-panel {
@@ -369,10 +376,9 @@ svg {
 }
 
 .service-card-featured {
-  grid-column: span 3;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: 1fr;
+  gap: 14px;
   padding: 24px;
   background: linear-gradient(135deg, rgba(8, 47, 99, 0.96), rgba(9, 159, 203, 0.9));
   color: #fff;
@@ -610,8 +616,9 @@ svg {
 }
 
 .contact-email {
-  font-size: 0.9rem;
+  font-size: 0.5rem;
   font-weight: 600;
+  line-height: 1.35;
   word-break: break-word;
 }
 
@@ -758,8 +765,8 @@ svg {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .service-card-featured {
-    grid-column: span 2;
+  .service-featured-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .trust-metrics {
@@ -828,13 +835,9 @@ svg {
     display: none;
   }
 
+  .service-featured-grid,
   .service-grid,
   .trust-metrics {
-    grid-template-columns: 1fr;
-  }
-
-  .service-card-featured {
-    grid-column: span 1;
     grid-template-columns: 1fr;
   }
 
