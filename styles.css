@@ -357,9 +357,10 @@ svg {
 
 .service-featured-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 22px;
   margin-bottom: 22px;
+  align-items: stretch;
 }
 
 .service-card,
@@ -766,7 +767,7 @@ svg {
   }
 
   .service-featured-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
   }
 
   .trust-metrics {
@@ -838,6 +839,10 @@ svg {
   .service-grid,
   .trust-metrics {
     grid-template-columns: 1fr;
+  }
+
+  .service-featured-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
   }
 
   .hero {
