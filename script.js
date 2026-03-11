@@ -208,22 +208,69 @@ document.querySelectorAll("[data-before-after]").forEach((comparison) => {
 const form = document.querySelector(".contact-form");
 
 if (form) {
+  const status = form.querySelector(".form-status");
+
+  const formMessages = {
+    en: {
+      sending: "Sending request...",
+      success: "Request sent successfully.",
+      invalid: "Please complete all required fields correctly.",
+      error: "We couldn't send your request. Please call us or try again."
+    },
+    es: {
+      sending: "Enviando solicitud...",
+      success: "Solicitud enviada correctamente.",
+      invalid: "Completa correctamente los campos obligatorios.",
+      error: "No pudimos enviar tu solicitud. Llámanos o vuelve a intentarlo."
+    }
+  };
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const button = form.querySelector("button");
+    const lang = document.documentElement.lang === "es" ? "es" : "en";
+    const copy = formMessages[lang];
 
-    if (!button) {
+    if (!button || !status) {
+      return;
+    }
+
+    if (!form.reportValidity()) {
+      status.textContent = copy.invalid;
+      status.dataset.state = "error";
       return;
     }
 
     const originalText = button.textContent;
-    button.textContent = document.documentElement.lang === "es" ? "Solicitud enviada" : "Request sent";
+    const formData = new FormData(form);
+    button.textContent = copy.sending;
     button.disabled = true;
+    status.textContent = "";
+    status.dataset.state = "";
 
-    setTimeout(() => {
-      button.textContent = originalText;
-      button.disabled = false;
-      form.reset();
-    }, 2200);
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json"
+      }
+    })
+      .then(async (response) => {
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok || !data.ok) {
+          throw new Error(data.message || copy.error);
+        }
+        status.textContent = copy.success;
+        status.dataset.state = "success";
+        form.reset();
+      })
+      .catch((error) => {
+        status.textContent = error.message || copy.error;
+        status.dataset.state = "error";
+      })
+      .finally(() => {
+        button.textContent = originalText;
+        button.disabled = false;
+      });
   });
 }

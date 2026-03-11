@@ -308,18 +308,18 @@
               <h2 data-i18n="contact.title">Ready for a production-ready version?</h2>
               <p><span data-i18n="contact.copy">Call us at</span> <a href="tel:+12015897668">(201) 589-7668</a> <span data-i18n="contact.copy2">or send a request.</span></p>
 
-              <form class="contact-form">
+              <form class="contact-form" action="contact.php" method="post" novalidate>
                 <label>
                   <span data-i18n="form.name">Name</span>
-                  <input type="text" name="name" placeholder="Your name" data-i18n-placeholder="form.namePlaceholder" />
+                  <input type="text" name="name" placeholder="Your name" data-i18n-placeholder="form.namePlaceholder" required />
                 </label>
                 <label>
                   Email
-                  <input type="email" name="email" placeholder="your@email.com" data-i18n-placeholder="form.emailPlaceholder" />
+                  <input type="email" name="email" placeholder="your@email.com" data-i18n-placeholder="form.emailPlaceholder" required />
                 </label>
                 <label>
                   <span data-i18n="form.service">Service</span>
-                  <select name="service">
+                  <select name="service" required>
                     <option data-i18n="cards.house.title">House Exterior Wash</option>
                     <option data-i18n="cards.driveway.title">Driveways and Walkways</option>
                     <option data-i18n="cards.gutter.title">Gutter Cleaning</option>
@@ -330,9 +330,11 @@
                 </label>
                 <label>
                   <span data-i18n="form.message">Message</span>
-                  <textarea name="message" rows="4" placeholder="Tell us what you need cleaned" data-i18n-placeholder="form.messagePlaceholder"></textarea>
+                  <textarea name="message" rows="4" placeholder="Tell us what you need cleaned" data-i18n-placeholder="form.messagePlaceholder" required></textarea>
                 </label>
+                <input type="text" name="company" tabindex="-1" autocomplete="off" class="contact-honeypot" aria-hidden="true" />
                 <button type="submit" class="button button-primary" data-i18n="form.submit">Request Estimate</button>
+                <p class="form-status" aria-live="polite"></p>
               </form>
             </section>
           </div>
