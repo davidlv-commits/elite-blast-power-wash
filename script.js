@@ -85,6 +85,9 @@ const translations = {
     "contact.copy2": "or send us your request today.",
     "form.name": "Name",
     "form.namePlaceholder": "Your name",
+    "form.phone": "Phone",
+    "form.phonePlaceholder": "(201) 589-7668",
+    "form.email": "Email",
     "form.emailPlaceholder": "your@email.com",
     "form.service": "Service",
     "form.message": "Message",
@@ -145,6 +148,9 @@ const translations = {
     "contact.copy2": "o envíanos tu solicitud hoy.",
     "form.name": "Nombre",
     "form.namePlaceholder": "Tu nombre",
+    "form.phone": "Telefono",
+    "form.phonePlaceholder": "(201) 589-7668",
+    "form.email": "Email",
     "form.emailPlaceholder": "tu@email.com",
     "form.service": "Servicio",
     "form.message": "Mensaje",
@@ -209,21 +215,67 @@ const form = document.querySelector(".contact-form");
 
 if (form) {
   const status = form.querySelector(".form-status");
+  const turnstileWrap = form.querySelector(".turnstile-wrap");
+  const turnstileNode = form.querySelector(".cf-turnstile");
 
   const formMessages = {
     en: {
       sending: "Sending request...",
       success: "Request sent successfully.",
       invalid: "Please complete all required fields correctly.",
-      error: "We couldn't send your request. Please call us or try again."
+      error: "We couldn't send your request. Please call us or try again.",
+      antiSpam: "Please complete the anti-spam check."
     },
     es: {
       sending: "Enviando solicitud...",
       success: "Solicitud enviada correctamente.",
       invalid: "Completa correctamente los campos obligatorios.",
-      error: "No pudimos enviar tu solicitud. Llámanos o vuelve a intentarlo."
+      error: "No pudimos enviar tu solicitud. Llamanos o vuelve a intentarlo.",
+      antiSpam: "Completa la verificacion anti-spam."
     }
   };
+
+  const trackLeadSubmission = () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "eliteblast_lead_submitted",
+      form_id: "contact-form",
+      domain: window.location.hostname
+    });
+
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "generate_lead", {
+        event_category: "contact",
+        event_label: "eliteblast_form"
+      });
+    }
+  };
+
+  fetch("turnstile-config.php", {
+    headers: { Accept: "application/json" }
+  })
+    .then((response) => response.json())
+    .then((config) => {
+      if (!config.enabled || !config.siteKey || !turnstileWrap || !turnstileNode) {
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      script.async = true;
+      script.defer = true;
+      script.onload = () => {
+        turnstileWrap.hidden = false;
+        if (window.turnstile) {
+          window.turnstile.render(turnstileNode, {
+            sitekey: config.siteKey,
+            theme: "light"
+          });
+        }
+      };
+      document.head.appendChild(script);
+    })
+    .catch(() => {});
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -239,6 +291,15 @@ if (form) {
       status.textContent = copy.invalid;
       status.dataset.state = "error";
       return;
+    }
+
+    if (!turnstileWrap.hidden && window.turnstile) {
+      const response = form.querySelector('[name="cf-turnstile-response"]');
+      if (!response || !response.value) {
+        status.textContent = copy.antiSpam;
+        status.dataset.state = "error";
+        return;
+      }
     }
 
     const originalText = button.textContent;
@@ -262,7 +323,14 @@ if (form) {
         }
         status.textContent = copy.success;
         status.dataset.state = "success";
+        trackLeadSubmission();
         form.reset();
+        if (window.turnstile) {
+          window.turnstile.reset();
+        }
+        window.setTimeout(() => {
+          window.location.href = `thank-you.html?lang=${lang}`;
+        }, 900);
       })
       .catch((error) => {
         status.textContent = error.message || copy.error;

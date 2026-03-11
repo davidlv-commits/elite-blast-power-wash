@@ -649,6 +649,10 @@ svg {
   pointer-events: none;
 }
 
+.turnstile-wrap {
+  min-height: 66px;
+}
+
 .form-status {
   min-height: 1.5rem;
   margin: 2px 0 0;
