@@ -393,6 +393,7 @@ svg {
 .service-card-featured h3,
 .service-card-featured p {
   margin: 0;
+  color: #fff;
 }
 
 .service-card-featured h3 {
@@ -401,7 +402,6 @@ svg {
 }
 
 .service-card-featured p {
-  color: rgba(255, 255, 255, 0.9);
   align-self: end;
 }
 
