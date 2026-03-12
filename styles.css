@@ -379,6 +379,7 @@ svg {
 .service-card {
   padding: 16px;
   border-radius: 26px;
+  text-align: center;
 }
 
 .service-card-featured {
