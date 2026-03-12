@@ -356,11 +356,16 @@ svg {
 }
 
 .service-featured-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  display: flex;
+  flex-wrap: nowrap;
   gap: 22px;
   margin-bottom: 22px;
   align-items: stretch;
+}
+
+.service-featured-grid > .service-card-featured {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .service-card,
@@ -767,7 +772,8 @@ svg {
   }
 
   .service-featured-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
   }
 
   .trust-metrics {
@@ -842,7 +848,8 @@ svg {
   }
 
   .service-featured-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
   }
 
   .hero {
