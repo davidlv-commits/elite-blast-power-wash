@@ -356,15 +356,14 @@ svg {
 }
 
 .service-featured-grid {
-  display: flex;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
   margin-bottom: 22px;
   align-items: stretch;
 }
 
 .service-featured-grid > .service-card-featured {
-  flex: 1 1 0;
   min-width: 0;
 }
 
@@ -778,8 +777,7 @@ svg {
   }
 
   .service-featured-grid {
-    display: flex !important;
-    flex-wrap: nowrap !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .trust-metrics {
@@ -797,24 +795,25 @@ svg {
   }
 
   .nav-wrap {
-    min-height: 64px;
-    padding-left: 0;
+    min-height: 72px;
+    padding-left: 16px;
     padding-right: 16px;
+    justify-content: space-between;
   }
 
   .brand {
-    left: 72px;
-    top: -10px;
-    width: 132px;
+    position: static;
+    width: 92px;
+    margin: 0 auto;
   }
 
   .brand-logo {
-    width: 120px;
-    max-width: 120px;
+    width: 92px;
+    max-width: 92px;
   }
 
   .brand-phone {
-    font-size: 0.7rem;
+    display: none;
   }
 
   .menu-toggle {
@@ -854,8 +853,7 @@ svg {
   }
 
   .service-featured-grid {
-    display: flex !important;
-    flex-wrap: nowrap !important;
+    grid-template-columns: 1fr;
   }
 
   .hero {
@@ -893,8 +891,8 @@ svg {
 
 @media (max-width: 560px) {
   .nav-wrap {
-    min-height: 56px;
-    padding-left: 0;
+    min-height: 64px;
+    padding-left: 16px;
   }
 
   .header-top-strip {
@@ -902,18 +900,8 @@ svg {
   }
 
   .brand-logo {
-    width: 96px;
-    max-width: 96px;
-  }
-
-  .brand {
-    left: 34px;
-    top: -2px;
-    width: 106px;
-  }
-
-  .brand-phone {
-    font-size: 0.58rem;
+    width: 84px;
+    max-width: 84px;
   }
 
   .hero {
