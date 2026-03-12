@@ -208,11 +208,11 @@ const setLanguage = (lang) => {
   });
 
   document.querySelectorAll("[data-phone-display]").forEach((element) => {
-    element.textContent = phone.display;
+    element.textContent = element.dataset[`phone${lang === "es" ? "Es" : "En"}`] || phone.display;
   });
 
   document.querySelectorAll("[data-phone-link]").forEach((element) => {
-    element.setAttribute("href", phone.href);
+    element.setAttribute("href", element.dataset[`phoneHref${lang === "es" ? "Es" : "En"}`] || phone.href);
   });
 
   document.querySelectorAll(".lang-button").forEach((button) => {
