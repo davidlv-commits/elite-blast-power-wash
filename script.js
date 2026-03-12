@@ -91,7 +91,7 @@ const translations = {
     "form.name": "Name",
     "form.namePlaceholder": "Your name",
     "form.phone": "Phone",
-    "form.phonePlaceholder": "(201) 589-7668",
+    "form.phonePlaceholder": "(862) 461-6480",
     "form.email": "Email",
     "form.emailPlaceholder": "your@email.com",
     "form.service": "Service",
@@ -170,8 +170,20 @@ const translations = {
   }
 };
 
+const phoneByLanguage = {
+  en: {
+    display: "(862) 461-6480",
+    href: "tel:+18624616480"
+  },
+  es: {
+    display: "(201) 589-7668",
+    href: "tel:+12015897668"
+  }
+};
+
 const setLanguage = (lang) => {
   const copy = translations[lang] || translations.en;
+  const phone = phoneByLanguage[lang] || phoneByLanguage.en;
   document.documentElement.lang = lang;
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -193,6 +205,14 @@ const setLanguage = (lang) => {
     if (copy[key]) {
       element.setAttribute("placeholder", copy[key]);
     }
+  });
+
+  document.querySelectorAll("[data-phone-display]").forEach((element) => {
+    element.textContent = phone.display;
+  });
+
+  document.querySelectorAll("[data-phone-link]").forEach((element) => {
+    element.setAttribute("href", phone.href);
   });
 
   document.querySelectorAll(".lang-button").forEach((button) => {
